@@ -2894,7 +2894,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1096825719427198, guid: 92e2e8a8fa8195a4f83ac9590bb632ef, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224236207320543286, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -559
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92e2e8a8fa8195a4f83ac9590bb632ef, type: 2}
@@ -3776,6 +3781,8 @@ GameObject:
   m_Component:
   - component: {fileID: 724649096}
   - component: {fileID: 724649095}
+  - component: {fileID: 724649098}
+  - component: {fileID: 724649097}
   m_Layer: 0
   m_Name: Acid (2)
   m_TagString: Untagged
@@ -3840,6 +3847,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &724649097
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724649094}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.29999536}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.56, y: 0.3100419}
+  m_EdgeRadius: 0
+--- !u!114 &724649098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 724649094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2d0f6595e54de4c8f1b9f3ac2d6f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Player
+  damage: 3
+  cwdDamage: 0.2
 --- !u!1 &731638741
 GameObject:
   m_ObjectHideFlags: 0
@@ -9112,6 +9158,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1944475408}
   - component: {fileID: 1944475407}
+  - component: {fileID: 1944475410}
+  - component: {fileID: 1944475409}
   m_Layer: 0
   m_Name: Acid (3)
   m_TagString: Untagged
@@ -9176,6 +9224,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 134
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1944475409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944475406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e2d0f6595e54de4c8f1b9f3ac2d6f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Player
+  damage: 3
+  cwdDamage: 0.2
+--- !u!61 &1944475410
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1944475406}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.02812457, y: 0.30486053}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 2.56}
+    newSize: {x: 2.56, y: 2.56}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5037508, y: 0.35727262}
+  m_EdgeRadius: 0
 --- !u!1 &1957866969
 GameObject:
   m_ObjectHideFlags: 0
