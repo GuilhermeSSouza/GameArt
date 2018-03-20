@@ -27,7 +27,7 @@ public class ShotScript : MonoBehaviour {
             Destroy(this.gameObject.GetComponent<Collider2D>());
             Destroy(this.gameObject, 1);
         }
-        if (col.CompareTag("Ground"))
+        if (col.CompareTag("Ground")||col.CompareTag("BlockDoor"))
         {
             Destroy(this.gameObject.GetComponent<Renderer>());
             Destroy(this.gameObject.GetComponent<Collider2D>());

@@ -71,24 +71,29 @@ public class Player : MonoBehaviour
         }
 
         if (Input.GetButtonDown("Jump"))
-        {
-          
+        {          
             if (grounded)
-            {
-              
+            {             
                 doubleJump = true;
                 rg2d.AddForce(Vector2.up * jumpPower);
-               
             }
             else if (doubleJump)
             {
-                
                 doubleJump = false;
                 rg2d.AddForce(Vector2.up * (jumpPower - 110f));
-               
             }
 
         }
+
+        if (!grounded && rg2d.velocity.y < -3)
+        {
+            rg2d.gravityScale = 1.9f;
+        }
+
+       
+
+
+
         /**
          * Atualiza e destroi o jogador
          */
@@ -159,9 +164,8 @@ public class Player : MonoBehaviour
 
     void Die()
     {
-        Destroy(gameObject, 1.2f);
-        int n = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(n);
+        //Destroy(gameObject, 1.2f);        
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
 
     }
