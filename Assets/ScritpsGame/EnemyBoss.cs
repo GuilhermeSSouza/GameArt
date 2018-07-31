@@ -8,31 +8,22 @@ public class EnemyBoss : MonoBehaviour
 
     public float speedMove = 5;
     public float damage;
-
     public float velocidadeEnemy;
-
-    public Transform target;
-
-    public Vector2 direction;
-
     public float range = 3f;
-
-
-
     public float distance;
-
     public float distancePlayer;
 
-    private Rigidbody2D rg2d;
 
-    private Animator anim;
-
-    private EnemyBoss enemyBoss;
-
-    private int couretHealth;
-
+    public Transform target;
+    public Vector2 direction;
     public GameObject dropKey;
 
+
+
+    private int couretHealth;
+    private Rigidbody2D rg2d;
+    private Animator anim;
+    private EnemyBoss enemyBoss;
     private BlockDoor door;
 
 

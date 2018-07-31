@@ -16,27 +16,29 @@ public class Player : MonoBehaviour
     public float maxSpeed = 5;
     public float speed = 50f;
     public float jumpPower = 300f;
-
-
-    private bool doubleJump;
-    public bool grounded;
+    public int corentHealth;
+    public int maxHealth = 5;
+    public bool grounded = true;
     public bool shootDown = false;
     public bool getKeyPlayer;
 
 
 
-    public int corentHealth;
-    public int maxHealth = 5;
 
 
+    private bool doubleJump;    
     private Rigidbody2D rg2d;
     private Animator anim;
-    private Player player;
-    GameObject objectEmpty;
+    private Player player;    
     private Spring spring;
     private Image menu;
-    //new AudioSource[] audio;
-    //private float audioMove= 0;
+
+
+
+
+    GameObject objectEmpty;
+
+
     
     // faz a inicalizações dos elementos q serão usados na cena.
     private void Start()
@@ -44,6 +46,7 @@ public class Player : MonoBehaviour
         //audio = gameObject.GetComponents<AudioSource>();
         menu = GameObject.FindGameObjectWithTag("MenuPause").GetComponent<Image>();  
         objectEmpty = new GameObject();
+        
         player = gameObject.GetComponentInParent<Player>();
         rg2d = gameObject.GetComponent<Rigidbody2D>();
         anim = gameObject.GetComponent<Animator>();
@@ -139,7 +142,7 @@ public class Player : MonoBehaviour
         }
         /*
          * Refatora pra deixar velocidade constante.
-         * opção a ser estudada maia a frente. 
+         * opção a ser estudada mais a frente. 
          */
 
         float h = Input.GetAxis("Horizontal");
@@ -177,6 +180,13 @@ public class Player : MonoBehaviour
 
     }
 
+
+
+
+
+    /**
+     * Metodo onCollisionEnter2D da classe, todos os teste de colisão dever ser implementados aqui
+     */
     void OnCollisionEnter2D(Collision2D col)
     {
         if (col.transform.tag == "MovingPlatform")
@@ -195,6 +205,12 @@ public class Player : MonoBehaviour
 
     }
 
+
+
+
+
+
+
     void OnCollisionExit2D(Collision2D col)
     {
         if (col.transform.tag == "MovingPlatform")
@@ -210,27 +226,14 @@ public class Player : MonoBehaviour
         }
     }
 
+
+
+
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         
     }
 
 
-    /*
-     * 
-     * Sicornização pessima. Deve existir um metodo ou api que faça isso.
-     *
-
-    void PlayerMoveAudio(float play) {
-        if (rg2d.velocity.x != 0 && grounded && play <= 0)
-        {
-            GetComponent<AudioSource>()[2].enabled = true;
-            GetComponent<AudioSource>()[2].Play();
-            audioMove = 1.5f;
-        }
-        else {
-            audioMove -= Time.deltaTime;
-        }
-    }
-    */
 }

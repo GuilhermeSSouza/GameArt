@@ -12,13 +12,17 @@ public class Enemy : MonoBehaviour {
     public float distance;
     public float distancePlayer;
     public bool grounded;
+
+
     public Transform target;
     public Vector2 direction;
+    public GameObject drop;
+
+
+    private int couretHealth;
     private Rigidbody2D rg2d;
     private Animator anim;
-    private Enemy enemy;
-    private int couretHealth;
-    public GameObject drop;
+    private Enemy enemy;     
     private Vector3 scaleObject;
  
 
