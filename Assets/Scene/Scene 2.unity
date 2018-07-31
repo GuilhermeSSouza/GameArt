@@ -14212,6 +14212,41 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: -30.699997
       objectReference: {fileID: 0}
+    - target: {fileID: 114434332877415804, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114434332877415804, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114434332877415804, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224236207320543286, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -583
+      objectReference: {fileID: 0}
+    - target: {fileID: 224236207320543286, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 354.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 224532716351868940, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -570
+      objectReference: {fileID: 0}
+    - target: {fileID: 224532716351868940, guid: 92e2e8a8fa8195a4f83ac9590bb632ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 317
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e2e8a8fa8195a4f83ac9590bb632ef, type: 2}
   m_IsPrefabAsset: 0
