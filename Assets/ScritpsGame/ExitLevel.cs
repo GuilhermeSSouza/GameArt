@@ -8,21 +8,22 @@ public class ExitLevel : MonoBehaviour {
 
 
     public int levelLoad;
-    private SetupManager mana;
+    private SetupManager setupMan;
 
     private void Start()
     {
-        mana = GameObject.FindGameObjectWithTag("Manager").GetComponent<SetupManager>();
+        setupMan = GameObject.FindGameObjectWithTag("Manager").GetComponent<SetupManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player")) {
 
-            mana.inuputLevel.text = ("Press    [E]");
+            setupMan.inuputLevel.text = ("Press    [E]");
 
             if (Input.GetKeyDown("e"))
             {
+                SaveScore();
                 SceneManager.LoadScene(levelLoad);
             }
            
@@ -34,10 +35,11 @@ public class ExitLevel : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
 
-            mana.inuputLevel.text = ("Press    [E]");
+            setupMan.inuputLevel.text = ("Press    [E]");
 
             if (Input.GetKeyDown("e"))
             {
+                SaveScore();
                 SceneManager.LoadScene(levelLoad);
             }
 
@@ -49,11 +51,16 @@ public class ExitLevel : MonoBehaviour {
         if (collision.CompareTag("Player"))
         {
 
-            mana.inuputLevel.text = ("");
+            setupMan.inuputLevel.text = ("");
 
            
 
         }
+    }
+
+    void SaveScore() {
+
+        PlayerPrefs.SetInt("Score", setupMan.score);
     }
 
 }

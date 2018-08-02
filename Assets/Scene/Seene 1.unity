@@ -18330,7 +18330,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab69119de5356e747acb0e405e694da4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  getCoins: 0
+  score: 0
   scoreCoins: {fileID: 1274212793}
   inuputLevel: {fileID: 795403578}
   startLevel: {fileID: 1574718113}
@@ -20747,11 +20747,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4770219869226922, guid: 9b829de39e967e543991eeeb217fa7be, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 169.23
+      value: 169.82
       objectReference: {fileID: 0}
     - target: {fileID: 4770219869226922, guid: 9b829de39e967e543991eeeb217fa7be, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -20.48
+      value: -20.63
       objectReference: {fileID: 0}
     - target: {fileID: 4770219869226922, guid: 9b829de39e967e543991eeeb217fa7be, type: 2}
       propertyPath: m_LocalPosition.z

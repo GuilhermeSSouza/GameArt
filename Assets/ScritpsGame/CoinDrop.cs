@@ -9,7 +9,7 @@ public class CoinDrop : MonoBehaviour
     public string tagName;
     public int coinsValue;
     new AudioSource audio;
-    private SetupManager coins;
+    private SetupManager setupMan;
 
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class CoinDrop : MonoBehaviour
     private void Start()
     {
         audio = gameObject.GetComponent<AudioSource>();
-        coins = GameObject.FindGameObjectWithTag("Manager").GetComponent<SetupManager>();
+        setupMan = GameObject.FindGameObjectWithTag("Manager").GetComponent<SetupManager>();
         audio.enabled = false;
     }
 
@@ -28,7 +28,7 @@ public class CoinDrop : MonoBehaviour
         {
             audio.enabled = true;
             audio.Play();
-            coins.getCoins += coinsValue;          
+            setupMan.score += coinsValue;          
             
             Destroy(this.gameObject.GetComponent<Collider2D>());
             Destroy(this.gameObject.GetComponent<Renderer>());
