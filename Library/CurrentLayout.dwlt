@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 442}
   m_MaxSize: {x: 12008, y: 8042}
   vertical: 0
-  controlID: 36
+  controlID: 23
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 105
+  controlID: 50
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,8 +228,8 @@ MonoBehaviour:
     y: 0
     width: 389
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 14}
@@ -281,7 +281,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoom: 0
@@ -293,18 +293,18 @@ MonoBehaviour:
       y: 17
       width: 1254
       height: 423
-    m_Scale: {x: 0.55078125, y: 0.55078125}
-    m_Translation: {x: 627, y: 211.5}
+    m_Scale: {x: 0.61990917, y: 0.61990917}
+    m_Translation: {x: 627, y: 225.30324}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -1138.3829
-      y: -384
-      width: 2276.7659
-      height: 768
+      x: -1011.4385
+      y: -363.44556
+      width: 2022.877
+      height: 682.35803
     m_MinimalGUI: 1
   m_defaultScale: 0.55078125
   m_TargetTexture: {fileID: 0}
@@ -345,9 +345,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 124.640205, y: -8.393344, z: -0.5235406}
+    m_Target: {x: 65.72438, y: -16.355757, z: -0.2643447}
     speed: 2
-    m_Value: {x: 124.640205, y: -8.393344, z: -0.5235406}
+    m_Value: {x: 65.72438, y: -16.355757, z: -0.2643447}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -379,9 +379,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 73.661705
+    m_Target: 45.702377
     speed: 2
-    m_Value: 73.661705
+    m_Value: 45.702377
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -420,9 +420,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 388f0000
-    m_LastClickedID: 36664
-    m_ExpandedIDs: 6469ffff0c71ffff527cffff0c81ffffe6fbffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: ba5bfdff525cfdffc65ffdffba61fdffda61fdffd26efdff686ffdffdc72fdffd074fdfff074fdff5c8effffe897ffffc298ffff1c9affff0a9cfffff09effffacafffffe6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -483,19 +483,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/ScritpsGame
+    - Assets/Scene
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ScritpsGame
+  - Assets/Scene
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Arcano\Documents\GameArt
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ba2c0000
-    m_LastClickedID: 11450
+    m_SelectedIDs: 68320000
+    m_LastClickedID: 12904
     m_ExpandedIDs: 000000005c2a0000142b0000c22b0000c42b0000ba2c0000062d0000c8330000a0350000c24300009255000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -549,9 +549,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a2910000
-    m_LastClickedInstanceID: 37282
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 8e86ffff
+    m_LastClickedInstanceID: -31090
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 2402.5}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 263
 --- !u!114 &15
