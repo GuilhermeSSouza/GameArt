@@ -3,7 +3,7 @@
 --- !u!74 &7400000
 AnimationClip:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Player_Melle_Atack
   serializedVersion: 6
@@ -21,7 +21,7 @@ AnimationClip:
     - time: 0
       value: {fileID: 21300000, guid: 0224f59c35736364a9c3bc49d5539a51, type: 3}
     - time: 0.033333335
-      value: {fileID: 21300000, guid: a90243288a29348409724d1bab46763e, type: 3}
+      value: {fileID: 21300000, guid: 0224f59c35736364a9c3bc49d5539a51, type: 3}
     - time: 0.083333336
       value: {fileID: 21300000, guid: 593764800d878a3488e87399c25c7526, type: 3}
     - time: 0.13333334
@@ -52,7 +52,7 @@ AnimationClip:
       isPPtrCurve: 1
     pptrCurveMapping:
     - {fileID: 21300000, guid: 0224f59c35736364a9c3bc49d5539a51, type: 3}
-    - {fileID: 21300000, guid: a90243288a29348409724d1bab46763e, type: 3}
+    - {fileID: 21300000, guid: 0224f59c35736364a9c3bc49d5539a51, type: 3}
     - {fileID: 21300000, guid: 593764800d878a3488e87399c25c7526, type: 3}
     - {fileID: 21300000, guid: 21ca1019d7d77b2489e6140bb4af467b, type: 3}
     - {fileID: 21300000, guid: 4a7f5efb13ad5e949b9075f6cc1f0566, type: 3}

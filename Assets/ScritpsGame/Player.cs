@@ -18,11 +18,15 @@ public class Player : MonoBehaviour
     public float jumpPower = 300f;
     public int corentHealth;
     public int maxHealth = 5;
-    public bool grounded = true;
     public bool shootDown = false;
     public bool getKeyPlayer;
 
 
+
+    public Transform graundCheck;
+    public float graundRadius;
+    public bool isGrounded;
+    public LayerMask layerCheck;
 
 
 
@@ -56,44 +60,58 @@ public class Player : MonoBehaviour
     }
 
 
-    void Update()
-    {   anim.SetBool("Grounded", grounded);
+    void Update()   {
+
+
+        isGrounded = Physics2D.OverlapCircle(graundCheck.position, graundRadius, layerCheck);
+        
+        anim.SetBool("Grounded", isGrounded);
         anim.SetBool("ShootDown", shootDown);
         anim.SetFloat("speed", Mathf.Abs(rg2d.velocity.x));
         anim.SetInteger("CorentHealth", corentHealth);
         corentHealth = player.GetComponent<HealtScript>().hp;
 
-        if (Input.GetAxis("Horizontal") < -0.1f)
+
+       
+
+        if (Input.GetAxisRaw("Horizontal") < -0.1f)
         {
+
             transform.localScale = new Vector3(-0.5f, 0.5f, 1);
+            rg2d.velocity = new Vector2(-maxSpeed, rg2d.velocity.y);
+
+        }
+        else if (Input.GetAxisRaw("Horizontal") > 0.1f)
+        {
+
+            transform.localScale = new Vector3(0.5f, 0.5f, 1);
+            rg2d.velocity = new Vector2(maxSpeed, rg2d.velocity.y);
+
+        }
+        else {
+            rg2d.velocity = new Vector2(0, rg2d.velocity.y);
         }
 
-        if (Input.GetAxis("Horizontal") > 0.1f)
-        {
-            transform.localScale = new Vector3(0.5f, 0.5f, 1);
-        }
+
 
         if (Input.GetButtonDown("Jump"))
         {          
-            if (grounded)
+            if (isGrounded)
             {             
                 doubleJump = true;
-                rg2d.AddForce(Vector2.up * jumpPower);
+                rg2d.velocity = new Vector2(rg2d.velocity.x, jumpPower);
+                //rg2d.AddForce(Vector2.up * jumpPower);
             }
             else if (doubleJump)
             {
                 doubleJump = false;
-                rg2d.AddForce(Vector2.up * (jumpPower - 110f));
+                rg2d.velocity = new Vector2(rg2d.velocity.x, jumpPower);
+                //rg2d.AddForce(Vector2.up * (jumpPower - 110f));
             }
 
         }
 
-        if (!grounded && rg2d.velocity.y < -3)
-        {
-            rg2d.gravityScale = 1.9f;
-        }
-
-       
+            
 
 
 
@@ -130,40 +148,8 @@ public class Player : MonoBehaviour
         
 
     }
-    void FixedUpdate()    {
-        Vector3 veloc = rg2d.velocity;
-        veloc.y = rg2d.velocity.y;
-        veloc.z = 0.0f;
-        veloc.x *= 0.85f;
-
-        if (grounded)
-        {
-            rg2d.velocity = veloc;
-        }
-        /*
-         * Refatora pra deixar velocidade constante.
-         * opção a ser estudada mais a frente. 
-         */
-
-        float h = Input.GetAxis("Horizontal");
-        rg2d.AddForce((Vector2.right * h) * speed);
-
-        if (rg2d.velocity.x > maxSpeed)        {
-            rg2d.velocity = new Vector2(maxSpeed, rg2d.velocity.y);
-
-        }
-        if (rg2d.velocity.x < -maxSpeed)
-        {
-            rg2d.velocity = new Vector2(-maxSpeed, rg2d.velocity.y);
-
-        }
-
-        /*
-         * Refatorar isso. 
-         */
-        //PlayerMoveAudio(audioMove);
-
-    }
+    void FixedUpdate() { }
+     
 
     void Die()
     {
