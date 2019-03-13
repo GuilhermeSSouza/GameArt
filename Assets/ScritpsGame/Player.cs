@@ -38,6 +38,14 @@ public class Player : MonoBehaviour
     private Image menu;
 
 
+    private bool attacking = false;
+
+    public Collider2D attackMelee;
+    new AudioSource audio;
+
+    public Transform shootPoint;
+    public GameObject shoot;
+
 
 
     GameObject objectEmpty;
@@ -48,7 +56,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         //audio = gameObject.GetComponents<AudioSource>();
-        menu = GameObject.FindGameObjectWithTag("MenuPause").GetComponent<Image>();  
+        menu = GameObject.FindGameObjectWithTag("MenuPause").GetComponent<Image>();
+        audio =  GameObject.FindGameObjectWithTag("MeleePlayer").GetComponent<AudioSource>();
         objectEmpty = new GameObject();
         
         player = gameObject.GetComponentInParent<Player>();
@@ -69,6 +78,7 @@ public class Player : MonoBehaviour
         anim.SetBool("ShootDown", shootDown);
         anim.SetFloat("speed", Mathf.Abs(rg2d.velocity.x));
         anim.SetInteger("CorentHealth", corentHealth);
+        anim.SetBool("AttackMelee", attacking);
         corentHealth = player.GetComponent<HealtScript>().hp;
 
 
@@ -134,18 +144,41 @@ public class Player : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && !(menu.isActiveAndEnabled))
         {
             shootDown = true;
-            weaponScript weapon = GetComponent<weaponScript>();
-            if (weapon != null)
-            {
-                weapon.AttackShoot();
-            }
+            GameObject shootClone = (GameObject) Instantiate(shoot, shootPoint.position, shootPoint.rotation);
+            shootClone.transform.localScale = (0.5f)*transform.localScale;
+
         }
         else
         {
             shootDown = false;
         }
-        
-        
+
+
+
+
+        /**
+         * Melee ataque e inicia audio 
+         */
+
+        if (Input.GetButtonDown("Fire2") && !attacking)
+        {
+
+            audio.enabled = true;
+            audio.Play();
+            attacking = true;
+            attackMelee.enabled = true;
+
+        }
+        else {
+
+            attacking = false;
+        }
+
+
+
+
+
+
 
     }
     void FixedUpdate() { }

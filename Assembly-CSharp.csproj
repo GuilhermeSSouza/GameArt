@@ -96,7 +96,6 @@
     <Compile Include="Assets\ScritpsGame\StartLevel.cs" />
     <Compile Include="Assets\ScritpsGame\TrapDoor.cs" />
     <Compile Include="Assets\ScritpsGame\WaxRotation.cs" />
-    <Compile Include="Assets\ScritpsGame\weaponScript.cs" />
     <None Include="Assets\Spites Game 2018-01\Platformer_Pack_Redux\Spritesheets\spritesheet_complete.xml" />
     <None Include="Assets\Spites Game 2018-01\Platformer_Extended\PNG Sand\Spritesheet\sheet.xml" />
     <None Include="Assets\Spites Game 2018-01\Platformer_Extended\PNG Tundra\Spritesheet\sheet.xml" />
